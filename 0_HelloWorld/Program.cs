@@ -173,14 +173,14 @@ static void guessing()
 {
     Random numberGen = new Random();
 
-    string Street = "Yonge Street" + numberGen.Next(1, 1000);
+    string Street = "Yonge Street " + numberGen.Next(1, 1000);
     int age = numberGen.Next(5, 100);
     int house = numberGen.Next(1, 10);
 
 
     Console.WriteLine("You live at " + Street);
     Console.WriteLine("You are " + age + " years old");
-    Console.WriteLine("And you are " + house + " people in the house you are living in your house");
+    Console.WriteLine("And you live " + house + " people in your house");
 }
 
     Console.WriteLine("Hi, now we have come to my guessing game");
@@ -191,6 +191,27 @@ static void guessing()
     Console.WriteLine("Now that there was probably only 1 of them that I did not get right I will try again");
     guessing();
     Console.ReadLine();
+
+    Console.WriteLine("I was probaly right this time");
+
+string c = Console.ReadLine();
+bool Guessinggame = false;
+if (c == "yes"){
+    HardWord = true;
+}
+
+if (Guessinggame == false){
+    Console.WriteLine("So that was not right either but I promise you this time I will be right");
+    Console.WriteLine("Well third time is the lucky time");
+    guessing();
+    Console.WriteLine("I knew I was right this time");
+    Console.ReadLine();
+}
+
+if (Guessinggame == true){
+    Console.WriteLine("I knew I was right this time");
+}
+
 #endregion
 
 
